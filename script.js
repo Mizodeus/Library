@@ -33,12 +33,15 @@ function renderBooks() {
 
         const title = document.createElement('p');
         title.textContent = book.title;
+        title.className = 'title';
 
         const pages = document.createElement('p');
-        pages.textContent = book.pages;
+        pages.textContent = 'Pages: ' + book.pages ;
+        pages.className = 'pages'
 
         const author = document.createElement('p');
         author.textContent = book.author;
+        author.className = 'author';
 
         const readBtn = document.createElement('button');
         const delBtn = document.createElement('button');

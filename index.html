@@ -9,7 +9,10 @@
 </head>
 <body>
     <div class="library">
-        <button class="addBook">Add New Book</button>
+        <div class="header">
+            <p class="logo">Library</p>
+            <button class="addBook">+</button>
+        </div>
 
         <div class="container">
             
@@ -18,7 +21,8 @@
 
     <dialog id="addBookDialog">
         <p>Add New Book</p>
-        <form method="dialog">
+
+        <form id="addBookForm">
             <div>
                 <label for="title">Title</label>
                 <input type="text" id="title" name="title" placeholder="Fight Club" required>
@@ -33,7 +37,7 @@
             </div>
             <div>
                 <label for="isRead">Read</label>
-                <input type="checkbox" id="isRead" name="isRead" required>
+                <input type="checkbox" id="isRead" name="isRead">
             </div>
             <button type="submit">Submit</button>
             <button type="button" id="cancelButton">Cancel</button>

@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #0360D9;
+    --border-color: #021526;
+    --text-color: #2E2E2E;
+    --overlay-color: #E1EEFF;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background: var(--primary-color);
+}
+
+.library {
+    height: 100%;
+    font-size: 3rem;
+}
+
+.library .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--secondary-color);
+    padding: 0.3em 1em;
+}
+
+.library .header .addBook {
+    width: 1.2em;
+    height: 1.2em;
+
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--overlay-color);
+    border-radius: 50%;
+    border: var(--border-color) 1px solid;
+
+    font-size: 1em;
+}
+
+.library .container {
+    height: 100%;
+    display: flex;
+
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.library .container .book-card {
+    width: 250px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.25em;
+
+    padding: 2em;
+    border-radius: 2em;
+    background: var(--primary-color);
+    border: var(--border-color) 1px solid;
+
+    font-size: 14px;
+}
+
+.library .container .book-card .title {
+    font-size: 1.5em;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.library .container .book-card .pages {
+    color: var(--text-color);
+}
+
+.library .container .book-card .author {
+    color: var(--text-color);
+}
+
+.library .container .book-card button {
+
+}
+
+dialog {
+    width: 20rem;
+    height: 20rem;
+    align-self: center;
+    justify-self: center;
+}
+
+form {
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
