@@ -6,6 +6,7 @@ const DEFAULT = [
 ];
 
 const container = document.querySelector('.container');
+const addBookButton = document.querySelector('.addBook')
 
 function Book(title, pages, isRead, author) {
     this.title = title;
