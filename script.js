@@ -1,8 +1,8 @@
 const library = [];
 
 const DEFAULT = [
-    {title: "Fight Club", pages: "224", isRead: true, author: "Chuck Palahniuk"},
-    {title: "The Witcher: The Last Wish", pages: "288", isRead: false, author: "Andrzej Sapkowski"}
+    {title: "Fight Club", pages: 224, isRead: true, author: "Chuck Palahniuk"},
+    {title: "The Witcher: The Last Wish", pages: 288, isRead: false, author: "Andrzej Sapkowski"}
 ];
 
 const container = document.querySelector('.container');
