@@ -6,7 +6,9 @@ const DEFAULT = [
 ];
 
 const container = document.querySelector('.container');
-const addBookButton = document.querySelector('.addBook')
+const addBookButton = document.querySelector('.addBook');
+const addBookDialog = document.querySelector('#addBookDialog');
+const cancelButton = document.querySelector('#cancelButton');
 
 function Book(title, pages, isRead, author) {
     this.title = title;
@@ -20,6 +22,14 @@ function addBookToLibrary(title, pages, isRead, author) {
     const book = new Book(title, pages, isRead, author);
     library.push(book);
 };
+
+addBookButton.addEventListener('click', () => {
+    addBookDialog.showModal();
+})
+
+cancelButton.addEventListener('click', () => {
+    addBookDialog.close()
+})
 
 library.push(...DEFAULT);
 
