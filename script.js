@@ -40,21 +40,32 @@ function renderBooks() {
         const author = document.createElement('p');
         author.textContent = book.author;
 
-        const btn = document.createElement('button');
+        const readBtn = document.createElement('button');
+        const delBtn = document.createElement('button');
+        delBtn.textContent = 'Delete';
 
         function updateButton() {
-            btn.classList.toggle('active', book.isRead);
-            btn.textContent = book.isRead ? 'Read' : 'Not Read';
+            readBtn.classList.toggle('active', book.isRead);
+            readBtn.textContent = book.isRead ? 'Read' : 'Not Read';
         }
 
         updateButton();
 
-        btn.addEventListener('click', () => {
+        readBtn.addEventListener('click', () => {
             book.isRead = !book.isRead;
             updateButton();
         });
 
-        card.append(title, pages, author, btn)
+        delBtn.addEventListener('click', () => {
+            const index = library.findIndex(book => book.id == book.id);
+
+            if (index !== -1) {
+                library.splice(index, 1);
+                renderBooks();
+            }
+        })
+
+        card.append(title, pages, author, readBtn, delBtn)
         container.append(card)
     });
 }
